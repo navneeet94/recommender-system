@@ -1,9 +1,11 @@
 from flask import Flask,jsonify
+from flask_cors import CORS
 import pandas as pd;
 
 movie_df = pd.read_csv('./data/movie_id.csv')
 
 app = Flask(__name__)
+CORS(app)
 
 def extractKeyVal(value):
     a,id,name= value
