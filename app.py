@@ -17,7 +17,7 @@ def movieList():
         movie_list.append(extractKeyVal(movie_df.iloc[i]))
     return jsonify(movie_list)
 
-@app.route("/movie-ids")
+@app.route("/api/movie-ids")
 def home():
     return movieList()
 
